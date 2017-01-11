@@ -2,7 +2,6 @@ from DBN_wm import DBN
 from load_data import load_data
 import pickle
 from sklearn.preprocessing import MinMaxScaler
-from utilis import shared_dataset_x, shared_dataset_y
 import numpy as np
 from sklearn.metrics import accuracy_score, roc_auc_score
 
@@ -22,12 +21,12 @@ for rand_seed in range(1234, 1254):
     X = XX[p].astype(np.float32)
     Y = YY[p]
 
-    train_set_x = shared_dataset_x(X[:5000])
-    valid_set_x = shared_dataset_x(X[5000:6500])
+    train_set_x = X[:5000]
+    valid_set_x = X[5000:6500]
     test_set_x = X[6500:]
 
-    train_set_y = shared_dataset_y(Y[:5000])
-    valid_set_y = shared_dataset_y(Y[5000:6500])
+    train_set_y = Y[:5000]
+    valid_set_y = Y[5000:6500]
     test_set_y = Y[6500:]
 
     # dbn = SdA(hidden_layers_sizes=[1500, 2000, 2000, 2000, 1500], pretrain_epochs=120, finetune_epochs=800)
