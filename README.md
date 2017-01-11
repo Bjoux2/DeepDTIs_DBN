@@ -1,5 +1,5 @@
 # DeepDTIs
-Deep learning-based drug-target interaction prediction.
+Please cite 'Deep learning-based drug-target interaction prediction'.
 
 The Deep belief net (DBN) code was rewritten from www.deeplearning.net 
 
