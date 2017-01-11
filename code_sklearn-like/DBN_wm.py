@@ -9,6 +9,8 @@ import theano
 import theano.tensor as T
 from theano.tensor.shared_randomstreams import RandomStreams
 from theano.sandbox.rng_mrg import MRG_RandomStreams
+from utilis import shared_dataset_x, shared_dataset_y
+
 
 class LogisticRegression(object):
     """Multi-class Logistic Regression Class
@@ -785,6 +787,7 @@ class DBN(object):
 
 
     def pretraining(self, train_set_x):
+        train_set_x = shared_dataset_x(train_set_x)
         # compute number of minibatches for training, validation and testing
         n_train_batches = train_set_x.get_value(borrow=True).shape[0] // self.pretrain_batch_size
 
@@ -823,6 +826,11 @@ class DBN(object):
         ########################
         # FINETUNING THE MODEL #
         ########################
+        train_set_x = shared_dataset_x(train_set_x)
+        train_set_y = shared_dataset_y(train_set_y)
+        valid_set_x = shared_dataset_x(valid_set_x)
+        valid_set_y = shared_dataset_y(valid_set_y)
+        
         n_train_batches = train_set_x.get_value(borrow=True).shape[0] // self.finetune_batch_size
         # get the training, validation and testing function for the model
         print('... getting the finetuning functions')
