@@ -31,6 +31,7 @@ def load_data():
 #         X_n.append(CLASH_N_features_dic[key].values())
 #     for key in Mark_N_features_dic.keys():
 #         X_n.append(Mark_N_features_dic[key].values())
+    
     # X should be a metrics with shape [n_samples, n_features]
     # Y should be a vector with shap [n_samples, ]
     X = np.array(X_p + X_n)
