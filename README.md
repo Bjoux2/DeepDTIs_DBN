@@ -3,7 +3,7 @@ Please cite 'Deep learning-based drug-target interaction prediction'.
 
 The Deep belief net (DBN) code was rewritten from www.deeplearning.net 
 
-The code in code_sklearn-like was recommended, the usage of the DBN here is similar to sklean:
+The code in 'code_sklearn-like' is recommended, the usage of the DBN here is similar to sklean:
 
 # pseudo-example:
 
@@ -21,7 +21,7 @@ y_pred = dbn_classifier.predict(test_y)
 
 # Dependencies:
 
-1), python 2.7, latest version
+1), Python 2.7, latest version
 
-2), theano, latest version
+2), Theano, latest version
 
