@@ -5,7 +5,7 @@ The Deep belief net (DBN) code was rewritten from www.deeplearning.net
 
 The code in 'code_sklearn-like' is recommended, the usage of the DBN here is similar to sklean:
 
-## pseudo-example:
+## Pseudo-example:
 
 from DBN_wm import DBN
 
