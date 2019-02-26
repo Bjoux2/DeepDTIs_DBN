@@ -18,6 +18,7 @@ dbn_classifier.finetuning(train_x, train_y, valid_x, valid_y)    # the valid set
 y_pred = dbn_classifier.predict(test_y)
 
 >>>More detaild example, see test_DBN.py
+
 >>>Please note that: the calculated data is very large (>4GB), we could not upload the calculated data. If you need the data, please follow the Data section (download molecular from Drugbank & calculate features using Biotriangle web platform) in the paper to construct the training data.
 
 ## Dependencies:
